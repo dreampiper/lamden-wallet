@@ -1,4 +1,4 @@
-# lamden
+# Lamden
 
 A new Flutter project.
 
