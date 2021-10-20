@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:lamden/utils/constants.dart';
 
-class Title extends StatelessWidget {
-  const Title({Key? key, required this.title}) : super(key: key);
+import '../utils/constants.dart';
 
-  final String title;
+class AccountName extends StatelessWidget {
+  const AccountName({Key? key, required this.name}) : super(key: key);
+
+  final String name;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Text(
-        title,
+        name,
         style: TextStyle(
           color: kWhite,
           fontWeight: FontWeight.w400,
-          fontSize: 32
+          fontSize: 32,
         ),
       ),
     );

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 // Colors
+const Color kWhite = Color(0xFFFFFFFF);
 const Color kBlack = Color(0xFF000000);
 const Color kGrey = Color(0xFF383838);
 const Color kBlueGrey100 = Color(0xFF84949E);
 const Color kBlueGrey200 = Color(0xFFA4B2BB);
 const Color kBlue100 = Color(0xFF461BC2);
 const Color kBlue200 = Color(0xFF4FB8FF);
-const Color kWhite = Color(0xFFFFFFFF);
 
 // Padding
 const double kPaddingM = 24.0;
@@ -29,7 +29,7 @@ const double kRadiusL = 15.0;
 const double kRadiusXL = 35.0;
 
 // Assets
-const String heroBg = '';
+const String heroBg = 'assets/images/hero_bg.png';
 
 // Gradient
 const homeBgGradient = BoxDecoration(
