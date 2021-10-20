@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lamden/localization.dart';
 
+import '../localization.dart';
 import '../routes.dart';
 import '../screens/account_screen.dart';
 import '../screens/home_screen.dart';

@@ -1,27 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:lamden/widgets/account_actions.dart';
-import 'package:lamden/widgets/account_sheet.dart';
+
+import '../utils/constants.dart';
+import '../widgets/account_actions.dart';
+import '../widgets/account_detail.dart';
+import '../widgets/account_sheet.dart';
 
 class AccountScreen extends HookWidget {
-  final pageController = usePageController();
+  final String name = "Elyn Account";
+  final double balance = 0;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          PageView(
-            controller: pageController,
-            children: [
-              // PageViewHeader(),
-              // PageViewHeader(),
-              // PageViewHeader(),
-            ],
-          ),
-          AccountActions(),
-          AccountDetailSheet()
-        ],
+    final pageController = usePageController();
+
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: kBlack,
+        body: Stack(
+          children: [
+            PageView(
+              controller: pageController,
+              children: [
+                AccountDetail(name: name, balance: balance),
+                AccountDetail(name: name, balance: balance),
+                AccountDetail(name: name, balance: balance),
+                AccountDetail(name: name, balance: balance),
+              ],
+            ),
+            AccountActions(),
+            AccountDetailSheet()
+          ],
+        ),
       ),
     );
   }

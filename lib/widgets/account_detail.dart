@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lamden/utils/constants.dart';
 import 'package:lamden/widgets/account_balance.dart';
 import 'package:lamden/widgets/account_name.dart';
 
@@ -14,11 +15,17 @@ class AccountDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        AccountName(name: name),
-        AccountBalance(balance: balance),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(left: kPaddingL),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: kSpaceM),
+          AccountName(name: name),
+          SizedBox(height: kSpaceS),
+          AccountBalance(balance: balance),
+        ],
+      ),
     );
   }
 }

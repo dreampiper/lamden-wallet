@@ -14,8 +14,8 @@ const double kPaddingM = 24.0;
 const double kPaddingL = 25.0;
 
 // Spacing
-const double kSpaceS = 40.0;
-const double kSpaceM = 35.0;
+const double kSpaceS = 35.0;
+const double kSpaceM = 40.0;
 
 // Margin
 const double kMarginS = 8.0;
