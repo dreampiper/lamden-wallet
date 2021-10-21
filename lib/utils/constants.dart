@@ -30,17 +30,18 @@ const double kRadiusXL = 35.0;
 
 // Assets
 const String heroBg = 'assets/images/hero_bg.png';
+const String copyAsset = 'assets/images/copy.svg';
+const String sendAsset = 'assets/images/send.svg';
 
 // Gradient
-const homeBgGradient = BoxDecoration(
-  gradient: LinearGradient(
-    begin: Alignment.topRight,
-    end: Alignment.bottomLeft,
-    colors: [
-      Color.fromRGBO(21, 21, 21, 0),
-      Color.fromRGBO(21, 21, 21, 1),
-    ],
-  ),
+const homeBgGradient = LinearGradient(
+  begin: Alignment.topCenter,
+  end: Alignment.bottomCenter,
+  colors: [
+    Color.fromRGBO(0, 0, 0, 0),
+    Color.fromRGBO(0, 0, 0, 0.6),
+    Color.fromRGBO(0, 0, 0, 1),
+  ],
 );
 
 // Shadow

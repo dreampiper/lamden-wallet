@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lamden/utils/constants.dart';
+import 'package:lamden/widgets/hero_bg.dart';
 
 import '../widgets/account_detail.dart';
 
@@ -7,7 +8,7 @@ class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   final String name = "Wallet Total";
-  final double balance = 0;
+  final double balance = 9.96;
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +17,13 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: kBlack,
         body: Stack(
           children: [
-            AccountDetail(name: name, balance: balance),
-            // TaskSheet(),
+            HeroBg(),
+            Column(
+              children: [
+                AccountDetail(name: name, balance: balance,),
+                // TaskSheet(),
+              ],
+            ),
           ],
         ),
       ),

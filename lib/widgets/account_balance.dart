@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lamden/utils/numbers.dart';
 import 'package:lamden/widgets/converted_tau.dart';
 
 import '../utils/constants.dart';
@@ -8,9 +9,13 @@ class AccountBalance extends StatelessWidget {
 
   final double balance;
 
+  bool x() => NumberUtils.stringify(balance).length < 2;
+
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Stack(
+      alignment:
+          x() ? AlignmentDirectional.topCenter : AlignmentDirectional.topStart,
       children: [
         Text(
           "TAU",
@@ -20,8 +25,15 @@ class AccountBalance extends StatelessWidget {
             fontSize: 24,
           ),
         ),
-        TauBalance(balance: balance),
-        ConvertedTau(balance: balance)
+        Column(
+          crossAxisAlignment:
+              x() ? CrossAxisAlignment.center : CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 18),
+            TauBalance(balance: balance),
+            ConvertedTau(balance: balance)
+          ],
+        )
       ],
     );
   }
@@ -35,7 +47,7 @@ class TauBalance extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      balance.toString(),
+      NumberUtils.stringify(balance),
       style: TextStyle(
         color: kWhite,
         fontWeight: FontWeight.w400,
