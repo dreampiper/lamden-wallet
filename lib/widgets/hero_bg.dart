@@ -9,24 +9,26 @@ class HeroBg extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
+        // use position to arrange get the desired mockup look
         Image.asset(
           heroBg,
           height: 560,
           fit: BoxFit.cover,
         ),
-        Column(
-          children: [
-            Container(
-              height: 400,
-              decoration: BoxDecoration(
-                gradient: homeBgGradient,
-              ),
-            ),
-            Container(
-              height: 160,
-              color: kBlack,
-            )
-          ],
+        Container(
+          height: 370,
+          decoration: BoxDecoration(
+            gradient: homeBgGradient,
+          ),
+        ),
+        Positioned(
+          bottom: 0,
+          left: 0,
+          right: 0,
+          child: Container(
+            height: 210,
+            color: kBlack,
+          ),
         )
       ],
     );

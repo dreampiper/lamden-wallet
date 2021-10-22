@@ -20,9 +20,9 @@ class AccountDetail extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: kSpaceM),
+          SizedBox(height: kSpaceL),
           AccountName(name: name),
-          SizedBox(height: kSpaceS),
+          SizedBox(height: kSpaceM),
           AccountBalance(balance: balance),
         ],
       ),
