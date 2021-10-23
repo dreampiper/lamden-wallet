@@ -37,6 +37,9 @@ const double kRadiusXL = 35.0;
 const String heroBg = 'assets/images/hero_bg.png';
 const String copyAsset = 'assets/images/copy.svg';
 const String sendAsset = 'assets/images/send.svg';
+const String plusAsset = 'assets/images/plus.svg';
+const String lamdenAsset = 'assets/images/lamden.svg';
+const String lamdenLinkedAsset = 'assets/images/lamden_linked.svg';
 
 // Gradient
 const homeBgGradient = LinearGradient(
@@ -73,12 +76,12 @@ List<BoxShadow> customShadow2 = [
 
 List<BoxShadow> customShadow3 = [
   BoxShadow(
-    color: Color.fromRGBO(150, 170, 180, 0.5),
-    spreadRadius: -10.0, //extend the shadow
-    blurRadius: 30.0, // soften the shadow
+    color: Color.fromRGBO(0, 0, 0, 0.15),
+    spreadRadius: 0.0, //extend the shadow
+    blurRadius: 5.0, // soften the shadow
     offset: Offset(
       0.0, // Move to right horizontally
-      7.0, // Move to bottom Vertically
+      0.0, // Move to bottom Vertically
     ),
   ),
 ];

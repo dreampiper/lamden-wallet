@@ -5,18 +5,18 @@ import 'package:lamden/utils/numbers.dart';
 class AccountTile extends StatelessWidget {
   const AccountTile({
     Key? key,
-    required this.icon,
-    required this.accountName,
-    required this.nickname,
-    required this.accountBalance,
-    required this.publicKey,
+    this.icon,
+    this.accountName,
+    this.nickname,
+    this.accountBalance,
+    this.publicKey,
   }) : super(key: key);
 
-  final String icon;
-  final String accountName;
-  final String nickname;
-  final double accountBalance;
-  final String publicKey;
+  final Widget? icon;
+  final String? accountName;
+  final String? nickname;
+  final double? accountBalance;
+  final String? publicKey;
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +35,9 @@ class AccountTile extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(kRadiusL),
                 color: kBlueGrey100.withOpacity(0.4),
+                boxShadow: customShadow3,
               ),
-              child: null,
+              child: icon,
             ),
           ),
           SizedBox(width: 15),
@@ -45,35 +46,37 @@ class AccountTile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                hasNickname(nickname) ? nickname : accountName,
+                hasNickname(nickname) ? nickname! : accountName!,
                 style: TextStyle(
                   color: kBlueGrey200,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w600,
                   fontSize: 24,
                 ),
               ),
-              SizedBox(height: 9),
-              Row(
-                children: [
-                  Text(
-                    NumberUtils.stringify(accountBalance) + " TAU",
-                    style: TextStyle(
-                      color: kBlueGrey100,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 18,
+              if (accountBalance != null) ...[
+                SizedBox(height: 9),
+                Row(
+                  children: [
+                    Text(
+                      NumberUtils.stringify(accountBalance!) + " TAU",
+                      style: TextStyle(
+                        color: kBlueGrey100,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 18,
+                      ),
                     ),
-                  ),
-                  SizedBox(width: 15),
-                  Text(
-                    "0.0%",
-                    style: TextStyle(
-                      color: kBlueGrey100,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 18,
+                    SizedBox(width: 15),
+                    Text(
+                      "0.0%",
+                      style: TextStyle(
+                        color: kBlueGrey100,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 18,
+                      ),
                     ),
-                  ),
-                ],
-              )
+                  ],
+                )
+              ]
             ],
           ),
         ],
@@ -81,5 +84,6 @@ class AccountTile extends StatelessWidget {
     );
   }
 
-  bool hasNickname(String nickname) => nickname.length > 0;
+  bool hasNickname(String? nickname) =>
+      nickname != null ? nickname.isNotEmpty : false;
 }

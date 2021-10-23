@@ -17,6 +17,7 @@ class HomeScreen extends StatelessWidget {
       icon: "",
       publicKey: "",
       privateKey: "",
+      linkedAccount: false,
     ),
     AccountModel(
       nickname: 'Lamden Paint',
@@ -25,6 +26,7 @@ class HomeScreen extends StatelessWidget {
       icon: "",
       publicKey: "",
       privateKey: "",
+      linkedAccount: true,
     ),
     AccountModel(
       nickname: "Rocketswap",
@@ -33,6 +35,7 @@ class HomeScreen extends StatelessWidget {
       icon: "",
       publicKey: "",
       privateKey: "",
+      linkedAccount: true,
     ),
   ];
 

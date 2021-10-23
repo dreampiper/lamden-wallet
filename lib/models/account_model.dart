@@ -5,6 +5,7 @@ class AccountModel {
   String? icon;
   String? privateKey;
   String? publicKey;
+  bool? linkedAccount;
 
   AccountModel({
     this.nickname,
@@ -13,6 +14,7 @@ class AccountModel {
     this.icon,
     this.privateKey,
     this.publicKey,
+    this.linkedAccount,
   });
 
   AccountModel.fromJson(Map<String, dynamic> json) {
@@ -22,6 +24,7 @@ class AccountModel {
     icon = json['icon'];
     privateKey = json['privateKey'];
     publicKey = json['publicKey'];
+    linkedAccount = json['linkedAccount'];
   }
 
   Map<String, dynamic> toJson() {
@@ -32,6 +35,7 @@ class AccountModel {
     data['icon'] = this.icon;
     data['privateKey'] = this.privateKey;
     data['publicKey'] = this.publicKey;
+    data['linkedAccount'] = this.linkedAccount;
     return data;
   }
 }
