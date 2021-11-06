@@ -8,7 +8,7 @@ import '../widgets/account_detail.dart';
 
 class HomeScreen extends StatelessWidget {
   final String name = "Wallet Total";
-  final double balance = 9;
+  final double balance = 0.00;
   final List<AccountModel> accounts = [
     AccountModel(
       nickname: "Elyn Account",
@@ -41,13 +41,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: kBlack,
-        body: Stack(
-          children: [
-            HeroBg(),
-            Column(
+    return Scaffold(
+      backgroundColor: kBlack,
+      body: Stack(
+        children: [
+          HeroBg(),
+          SafeArea(
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 AccountDetail(name: name, balance: balance),
@@ -55,8 +55,8 @@ class HomeScreen extends StatelessWidget {
                 AccountList(accounts: accounts),
               ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

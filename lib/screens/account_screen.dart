@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:lamden/models/screen_args_model.dart';
 import 'package:lamden/widgets/hero_bg.dart';
 
 import '../utils/constants.dart';
@@ -15,15 +16,16 @@ class AccountScreen extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final pageController = usePageController();
+    final args = ModalRoute.of(context)!.settings.arguments as ScreenArgs;
+    final pageController = usePageController(initialPage: args.index);
 
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: kBlack,
-        body: Stack(
-          children: [
-            HeroBg(),
-            PageView(
+    return Scaffold(
+      backgroundColor: kBlack,
+      body: Stack(
+        children: [
+          HeroBg(),
+          SafeArea(
+            child: PageView(
               controller: pageController,
               children: [
                 AccountDetail(name: name1, balance: balance),
@@ -31,10 +33,10 @@ class AccountScreen extends HookWidget {
                 AccountDetail(name: name3, balance: balance),
               ],
             ),
-            AccountActions(),
-            AccountDetailSheet()
-          ],
-        ),
+          ),
+          AccountActions(),
+          AccountDetailSheet()
+        ],
       ),
     );
   }

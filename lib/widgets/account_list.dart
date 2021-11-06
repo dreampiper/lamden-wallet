@@ -50,6 +50,8 @@ class AccountList extends StatelessWidget {
                           bottom: kPaddingBottom,
                         ),
                         child: AccountTile(
+                          index: 0,
+                          action: 'create account',
                           icon: Center(child: plusSvg),
                           accountName: 'Create New Account',
                         ),
@@ -68,6 +70,8 @@ class AccountList extends StatelessWidget {
                           bottom: kPaddingBottom,
                         ),
                         child: AccountTile(
+                          index: index,
+                          action: 'view account',
                           icon: getIcon(
                             icon: accounts[index].icon!,
                             linked: accounts[index].linkedAccount!,

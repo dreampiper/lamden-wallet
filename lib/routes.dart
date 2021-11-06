@@ -1,14 +1,15 @@
 class LamdenRoutes {
-  static final home = '/';
-  static final about = '/about';
-  static final account = '/account';
-  static final history = '/history';
-  static final login = '/login';
-  static final notifications = '/notifications';
-  static final onboard = '/onboard';
-  static final settings = '/settings';
-  static final signup = '/signup';
-  static final share = '/share';
-  static final support = '/support';
-  static final termsAndConditions = '/terms-and-condtions';
+  static const home = '/';
+  static const about = '/about';
+  static const account = '/account';
+  static const addAccount = '/add-account';
+  static const history = '/history';
+  static const login = '/login';
+  static const notifications = '/notifications';
+  static const onboard = '/onboard';
+  static const settings = '/settings';
+  static const signin = '/signin';
+  static const share = '/share';
+  static const support = '/support';
+  static const termsAndConditions = '/terms-and-condtions';
 }

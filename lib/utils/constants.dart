@@ -16,6 +16,7 @@ const double kPaddingL = 25.0;
 const double kPaddingBottom = 20.0;
 
 // Spacing
+const double kSpaceT = 25.0;
 const double kSpaceS = 30.0;
 const double kSpaceM = 35.0;
 const double kSpaceL = 40.0;
@@ -34,12 +35,12 @@ const double kRadiusL = 15.0;
 const double kRadiusXL = 35.0;
 
 // Assets
-const String heroBg = 'assets/images/hero_bg.png';
-const String copyAsset = 'assets/images/copy.svg';
-const String sendAsset = 'assets/images/send.svg';
-const String plusAsset = 'assets/images/plus.svg';
-const String lamdenAsset = 'assets/images/lamden.svg';
-const String lamdenLinkedAsset = 'assets/images/lamden_linked.svg';
+const String heroBg = 'images/hero_bg.png';
+const String copyAsset = 'images/copy.svg';
+const String sendAsset = 'images/send.svg';
+const String plusAsset = 'images/plus.svg';
+const String lamdenAsset = 'images/lamden.svg';
+const String lamdenLinkedAsset = 'images/lamden_linked.svg';
 
 // Gradient
 const homeBgGradient = LinearGradient(
